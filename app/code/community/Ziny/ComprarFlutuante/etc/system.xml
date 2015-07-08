@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Botão de Compra Flutuante
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ziny
+ * @package    ComprarFlutuante
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
+ */
+-->
+<config>
+    <tabs>
+        <ziny translate="label">
+            <label>Comprar Flutuante</label>
+            <sort_order>200</sort_order>
+        </ziny>
+    </tabs>
+    <sections>
+        <comprarflutuante translate="label" module="comprarflutuante">
+            <label>General</label>
+            <class>comprarflutuante-section</class>
+            <tab>ziny</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>9999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <ativo translate="label comment">
+                            <label>Enable</label>
+                            <comment>Define se o módulo está ativo ou não.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>							
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ativo>
+                        <cor_fundo translate="label">
+                            <label>Cor de Fundo</label>
+                            <comment>Cor de fundo da caixa do botão.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cor_fundo>
+                        <cor_esconder translate="label">
+                            <label>Cor do Botão Esconder</label>
+                            <comment>A cor do botão para esconder a caixa.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cor_esconder>
+                        <cor_escondido translate="label">
+                            <label>Cor do Botão Escondido</label>
+                            <comment>A cor do botão quando a caixa estiver escondida.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cor_escondido>
+                        <distancia_topo translate="label">
+                            <label>Distância do Topo</label>
+                            <comment>Espaço em que a caixa ficará do topo da tela.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </distancia_topo>
+                        <distancia_lateral translate="label">
+                            <label>Distância da Lateral</label>
+                            <comment>Espaço em que a caixa ficará da lateral da tela.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </distancia_lateral>
+                        <caixa_lado translate="label comment">
+                            <label>Posição do Botão Flutuante </label>
+                            <comment>Qual o lado da tela a caixa do botão deve aparecer.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>comprarflutuante/config_lado</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </caixa_lado>
+                        <caixa_tamanho translate="label">
+                            <label>Tamanho da Caixa</label>
+                            <comment>Se ficar em branco a caixa assume o tamanho automático.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </caixa_tamanho>
+                    </fields>
+                </general>
+            </groups>
+        </comprarflutuante>
+    </sections>
+</config>

@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Botão de Compra Flutuante
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ziny
+ * @package    ComprarFlutuante
+ * @copyright  Copyright (c) 2015 Agência Ziny (www.agenciaziny.com.br)
+ * @license    http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @author     Agência Ziny <dev@agenciaziny.com.br>
+ */
+-->
+<config>
+    <modules>
+        <Ziny_ComprarFlutuante>
+            <version>1.0.0</version>
+        </Ziny_ComprarFlutuante>
+    </modules>
+    <frontend>
+        <routers>
+            <comprarflutuante>
+                <use>standard</use>
+                <args>
+                    <module>Ziny_ComprarFlutuante</module>
+                    <frontName>comprarflutuante</frontName>
+                </args>
+            </comprarflutuante>
+        </routers>
+        <translate>
+            <modules>
+                <Ziny_ComprarFlutuante>
+                    <files>
+                        <default>Ziny_ComprarFlutuante.csv</default>
+                    </files>
+                </Ziny_ComprarFlutuante>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <comprarflutuante>
+                    <file>ziny/comprarflutuante.xml</file>
+                </comprarflutuante>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <layout>
+            <updates>
+                <ziny>
+                    <file>comprarflutuante/comprarflutuante.xml</file>
+                </ziny>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Ziny_ComprarFlutuante>
+                    <files>
+                        <default>Ziny_ComprarFlutuante.csv</default>
+                    </files>
+                </Ziny_ComprarFlutuante>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <comprarflutuante>
+                                            <title>Buy Floating Button</title>
+                                        </comprarflutuante>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>     
+    </adminhtml> 
+    <global>
+        <resources>
+            <comprarflutuante_setup>
+                <setup>
+                    <module>Ziny_ComprarFlutuante</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </comprarflutuante_setup>
+            <comprarflutuante_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </comprarflutuante_write>
+            <comprarflutuante_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </comprarflutuante_read>
+        </resources>
+        <blocks>
+            <comprarflutuante>
+                <class>Ziny_ComprarFlutuante_Block</class>
+            </comprarflutuante>
+        </blocks> 
+        <helpers>
+            <comprarflutuante>
+                <class>Ziny_ComprarFlutuante_Helper</class>
+            </comprarflutuante>
+        </helpers>
+        <models>
+            <comprarflutuante>
+                <class>Ziny_ComprarFlutuante_Model</class>
+            </comprarflutuante>
+        </models>
+    </global>
+    <default>
+        <comprarflutuante>
+            <general>
+                <ativo>0</ativo>
+                <cor_fundo>#ffffff</cor_fundo>
+                <cor_esconder>#ffffff</cor_esconder>
+                <distancia_topo>20%</distancia_topo>
+                <distancia_lateral>.5%</distancia_lateral>
+                <caixa_lado>right</caixa_lado>
+                <caixa_tamanho>260px</caixa_tamanho>
+            </general>
+        </comprarflutuante>
+    </default>
+    <admin>
+        <routers>
+            <comprarflutuante>
+                <use>admin</use>
+                <args>
+                    <module>Ziny_ComprarFlutuante</module>
+                    <frontName>comprarflutuante</frontName>
+                </args>
+            </comprarflutuante>
+        </routers>
+    </admin>
+</config>

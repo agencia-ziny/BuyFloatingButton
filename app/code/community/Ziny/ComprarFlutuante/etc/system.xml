@@ -20,13 +20,13 @@
 <config>
     <tabs>
         <ziny translate="label">
-            <label>Comprar Flutuante</label>
+            <label>Buy Floating Button</label>
             <sort_order>200</sort_order>
         </ziny>
     </tabs>
     <sections>
         <comprarflutuante translate="label" module="comprarflutuante">
-            <label>Definições</label>
+            <label>Settings</label>
             <class>comprarflutuante-section</class>
             <tab>ziny</tab>
             <frontend_type>text</frontend_type>
@@ -36,7 +36,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <general translate="label">
-                    <label>Definições</label>
+                    <label>Settings</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
@@ -45,7 +45,7 @@
                     <fields>
                         <ativo translate="label comment">
                             <label>Enable</label>
-                            <comment>Define se o módulo está ativo ou não.</comment>
+                            <comment>Defines whether the module is active or not.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>							
                             <sort_order>1</sort_order>
@@ -54,8 +54,8 @@
                             <show_in_store>1</show_in_store>
                         </ativo>
                         <cor_fundo translate="label">
-                            <label>Cor de Fundo</label>
-                            <comment>Cor de fundo da caixa do botão.</comment>
+                            <label>Box Background color</label>
+                            <comment>Background color of the button box.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
@@ -63,8 +63,8 @@
                             <show_in_store>1</show_in_store>
                         </cor_fundo>
                         <cor_esconder translate="label">
-                            <label>Cor do Botão Esconder</label>
-                            <comment>A cor do botão para esconder a caixa.</comment>
+                            <label>Color Hide Button</label>
+                            <comment>The button color to hide the box.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -72,8 +72,8 @@
                             <show_in_store>1</show_in_store>
                         </cor_esconder>
                         <cor_escondido translate="label">
-                            <label>Cor do Botão Escondido</label>
-                            <comment>A cor do botão quando a caixa estiver escondida.</comment>
+                            <label>Color Hidded Button</label>
+                            <comment>The button color when the box is hidden.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -81,8 +81,8 @@
                             <show_in_store>1</show_in_store>
                         </cor_escondido>
                         <distancia_topo translate="label">
-                            <label>Distância do Topo</label>
-                            <comment>Espaço em que a caixa ficará do topo da tela.</comment>
+                            <label>Margin Top</label>
+                            <comment>Margin in the box is the top of the screen.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
@@ -90,8 +90,8 @@
                             <show_in_store>1</show_in_store>
                         </distancia_topo>
                         <distancia_lateral translate="label">
-                            <label>Distância da Lateral</label>
-                            <comment>Espaço em que a caixa ficará da lateral da tela.</comment>
+                            <label>Side Margin</label>
+                            <comment>Margin in the box is the top of the screen.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
@@ -99,8 +99,8 @@
                             <show_in_store>1</show_in_store>
                         </distancia_lateral>
                         <caixa_lado translate="label comment">
-                            <label>Posição do Botão Flutuante </label>
-                            <comment>Qual o lado da tela a caixa do botão deve aparecer.</comment>
+                            <label>Position of the Floating Button</label>
+                            <comment>Which side of the screen the button box should appear.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>comprarflutuante/config_lado</source_model>
                             <sort_order>7</sort_order>
@@ -109,8 +109,8 @@
                             <show_in_store>1</show_in_store>
                         </caixa_lado>
                         <caixa_tamanho translate="label">
-                            <label>Tamanho da Caixa</label>
-                            <comment>Se ficar em branco a caixa assume o tamanho automático.</comment>
+                            <label>Box Size</label>
+                            <comment>If left blank the box assumes the automatic size.</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>8</sort_order>
                             <show_in_default>1</show_in_default>

@@ -17,7 +17,7 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 -->
-<layout version="0.1.0">
+<layout version="1.0.1">
     <catalog_product_view>
         <reference name="head">
             <action method="addJs">
@@ -28,7 +28,7 @@
             </action>
         </reference>
         <reference name="product.info.form">         
-            <block type="comprarflutuante/comprarflutuante" name="ziny.comprarflutuante" template="ziny/comprarflutuante/addtocart.phtml" output="toHtml"/>      
+            <block type="comprarflutuante/comprarflutuante" name="comprarflutuante" template="ziny/comprarflutuante/addtocart.phtml" output="toHtml"/>      
         </reference>
     </catalog_product_view>
 </layout>

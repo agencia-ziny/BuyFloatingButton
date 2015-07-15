@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_ComprarFlutuante>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Ziny_ComprarFlutuante>
     </modules>
     <frontend>
@@ -66,48 +66,9 @@
                     </files>
                 </Ziny_ComprarFlutuante>
             </modules>
-        </translate>
-        <acl>
-            <resources>
-                <admin>
-                    <children>
-                        <system>
-                            <children>
-                                <config>
-                                    <children>
-                                        <comprarflutuante>
-                                            <title>Comprar Flutuante</title>
-                                        </comprarflutuante>
-                                    </children>
-                                </config>
-                            </children>
-                        </system>
-                    </children>
-                </admin>
-            </resources>
-        </acl>     
+        </translate>     
     </adminhtml> 
     <global>
-        <resources>
-            <comprarflutuante_setup>
-                <setup>
-                    <module>Ziny_ComprarFlutuante</module>
-                </setup>
-                <connection>
-                    <use>core_setup</use>
-                </connection>
-            </comprarflutuante_setup>
-            <comprarflutuante_write>
-                <connection>
-                    <use>core_write</use>
-                </connection>
-            </comprarflutuante_write>
-            <comprarflutuante_read>
-                <connection>
-                    <use>core_read</use>
-                </connection>
-            </comprarflutuante_read>
-        </resources>
         <blocks>
             <comprarflutuante>
                 <class>Ziny_ComprarFlutuante_Block</class>

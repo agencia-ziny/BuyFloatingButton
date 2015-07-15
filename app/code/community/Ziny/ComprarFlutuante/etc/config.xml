@@ -130,6 +130,7 @@
                 <ativo>0</ativo>
                 <cor_fundo>#ffffff</cor_fundo>
                 <cor_esconder>#ffffff</cor_esconder>
+                <cor_escondido>#3399cc</cor_escondido>
                 <distancia_topo>20%</distancia_topo>
                 <distancia_lateral>.5%</distancia_lateral>
                 <caixa_lado>right</caixa_lado>

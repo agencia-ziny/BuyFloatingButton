@@ -16,6 +16,6 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
-class Ziny_ComprarFlutuante_Block_ComprarFlutuante extends Mage_Catalog_Block_Product_Abstract {
+class Ziny_ComprarFlutuante_Block_Comprarflutuante extends Mage_Catalog_Block_Product_Abstract {
     
 }

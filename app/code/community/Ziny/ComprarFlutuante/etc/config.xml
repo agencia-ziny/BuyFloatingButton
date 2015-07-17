@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_ComprarFlutuante>
-            <version>1.0.6</version>
+            <version>1.0.7</version>
         </Ziny_ComprarFlutuante>
     </modules>
     <frontend>
@@ -73,7 +73,7 @@
                                 <config>
                                     <children>
                                         <comprarflutuante translate="title" module="comprarflutuante">
-                                            <title>uy Floating Button</title>
+                                            <title>Buy Floating Button</title>
                                             <sort_order>202</sort_order>
                                         </comprarflutuante>			
                                     </children>

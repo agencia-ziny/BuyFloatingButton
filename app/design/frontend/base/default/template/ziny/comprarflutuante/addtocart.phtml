@@ -20,15 +20,15 @@
     <?php $_product = $this->getProduct(); ?>
     <?php if ($_product->isSaleable()): ?>    
         <?php $_tituloBotao = $this->__('Add to Cart'); ?>
-        <div id="_comprar-flutuante" class="_comprar-flutuante">
+        <div id="_comprar-flutuante">
             <span id="_area-comprar-flutuante" class="_area-comprar-flutuante"></span>
             <span class="_area-precos">
                 <?php echo $this->getPriceHtml($_product, false, '-comprar-flutuante') ?>
                 <?php echo $this->getChildHtml('bundle_prices') ?>
-                <?php echo $this->getTierPriceHtml() ?>
+                <?php echo $this->getTierPriceHtml(); ?>
             </span>
             <div class="add-to-cart-buttons">
-                <button type="button" title="<?php echo$_tituloBotao; ?>" class="button" onclick="productAddToCartForm.submit(this);">
+                <button type="button" title="<?php echo $_tituloBotao; ?>" class="button" onclick="productAddToCartForm.submit(this);">
                     <span>
                         <span><?php echo $_tituloBotao; ?></span>
                     </span>

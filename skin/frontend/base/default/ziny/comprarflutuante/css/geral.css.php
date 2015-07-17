@@ -19,28 +19,31 @@
 
 define('MAGENTO_ROOT', (dirname(__FILE__).'../../../../../../../../'));
 
+// Mage include
 require_once MAGENTO_ROOT . 'app/Mage.php';
 
 umask(0);
 Mage::app();
 
+// Get defines
 $config = Mage::getStoreConfig('comprarflutuante/general');
 
 header("Content-type: text/css; charset: UTF-8");
 ?>
-._comprar-flutuante, ._comprar-flutuante-fechado, ._comprar-flutuante #_area-comprar-flutuante:before, #_comprar-flutuante .add-to-cart-buttons, #_comprar-flutuante .add-to-cart-buttons .button {
+#_comprar-flutuante, ._comprar-flutuante-fechado, ._comprar-flutuante #_area-comprar-flutuante:before, #_comprar-flutuante .add-to-cart-buttons, #_comprar-flutuante .add-to-cart-buttons .button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-._comprar-flutuante {
+#_comprar-flutuante {
     position: fixed;
     <?php echo $config['caixa_lado'];?>: <?php echo $config['distancia_lateral'];?>;
     top: <?php echo $config['distancia_topo'];?>;
     background: <?php echo $config['cor_fundo'];?>;
     border: 1px solid #e5e5e5;
-    box-shadow: 4px 3px 0 0 rgba(0,0,0,0.1);
-    display: none;
+    box-shadow: 4px 3px 0 0 rgba(0, 0, 0, .1);
+    opacity:0;
+    filter: alpha(opacity=0);
     padding: 20px;    
     width: <?php echo ($config['caixa_tamanho']) == '' ? '260px' : $config['caixa_tamanho'];?>;
     z-index:999999;
@@ -49,27 +52,41 @@ header("Content-type: text/css; charset: UTF-8");
     -o-transition: 150ms all linear 0s;
     transition: 150ms all linear 0s;
 }
-._comprar-flutuante-fechado {
+#_comprar-flutuante._bloco-exibir {
+    -webkit-transition: 150ms all linear 0s;
+    -moz-transition: 150ms all linear 0s;
+    -o-transition: 150ms all linear 0s;
+    transition: 150ms all linear 0s;
+    opacity:1 !important;
+    filter: alpha(opacity=100) !important;
+}
+#_comprar-flutuante._comprar-flutuante-fechado {
     <?php echo $config['caixa_lado'];?>: -<?php echo ($config['caixa_tamanho']) == '' ? '260px' : $config['caixa_tamanho'];?>;
     -webkit-transition: 150ms all linear 0s;
     -moz-transition: 150ms all linear 0s;
     -o-transition: 150ms all linear 0s;
     transition: 150ms all linear 0s;
 }
-._comprar-flutuante #_area-comprar-flutuante:before {
+#_comprar-flutuante #_area-comprar-flutuante:before {
     background-color: <?php echo $config['cor_esconder'];?>;
-    border-bottom: 2px solid #d4d4d4;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #eee;
+    border-bottom: 2px solid #ddd;    
     <?php if ($config['caixa_lado'] == 'right'):?>
     left: -25px;
-    border-left: 1px solid #e5e5e5;
-    border-radius:4px 0 0 4px;
-    content: "˃";
+    border-left: 1px solid #eee;
+    -webkit-border-radius:3px 0 0 3px;
+    -moz-border-radius:3px 0 0 3px;
+    -o-border-radius:3px 0 0 3px;
+    border-radius:3px 0 0 3px;
+    content: '˃';
     <?php else: ?>
     right: -25px;
-    border-right: 1px solid #e5e5e5;
-    border-radius:0 4px 4px 0;
-    content: "<";
+    border-right: 1px solid #eee;
+    -webkit-border-radius:0 3px 3px 0;
+    -moz-border-radius:0 3px 3px 0;
+    -o-border-radius:0 3px 3px 0;
+    border-radius:0 3px 3px 0;
+    content: '<';
     <?php endif; ?>
     color: #2a2a2a;
     cursor: pointer;
@@ -86,21 +103,21 @@ header("Content-type: text/css; charset: UTF-8");
     -o-transition: 150ms all linear 0s;
     transition: 150ms all linear 0s;
 }
-._comprar-flutuante #_area-comprar-flutuante:hover:before, ._comprar-flutuante-fechado #_area-comprar-flutuante:before {
+#_comprar-flutuante #_area-comprar-flutuante:hover:before, #_comprar-flutuante._comprar-flutuante-fechado #_area-comprar-flutuante:before {
     display: block;
     background-color: <?php echo $config['cor_escondido'];?>;
-    border-bottom: 2px solid #002e02;
+    border-bottom:2px solid rgba(0, 0, 0, 0.1);
     color: #fff;
     -webkit-transition: 150ms all linear 0s;
     -moz-transition: 150ms all linear 0s;
     -o-transition: 150ms all linear 0s;
     transition: 150ms all linear 0s;
 }
-._comprar-flutuante-fechado #_area-comprar-flutuante:before {
+#_comprar-flutuante._comprar-flutuante-fechado #_area-comprar-flutuante:before {
     <?php if ($config['caixa_lado'] == 'right'):?>
-    content: "<";
+    content: '<';
     <?php else: ?>
-    content: ">";
+    content: '>';
     <?php endif; ?>
 }
 #_comprar-flutuante .price-info, #_comprar-flutuante .price-box {

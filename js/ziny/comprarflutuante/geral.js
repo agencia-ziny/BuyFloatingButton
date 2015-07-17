@@ -14,7 +14,7 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
-window.onload = function () {
+;window.onload = function () {
 
     var i,
             $_precos = document.getElementsByClassName('price'),
@@ -25,9 +25,15 @@ window.onload = function () {
             _itemFlutuante;
 
     for (i = 0; i < $_precos.length; i++) {
-
-        _preco = ($_precos[i].id != '' && $_precos[i].id != null && $_precos[i].id != 'undefined') ? $_precos[i].id : $_precos[i].parentNode.id;
-
+        
+        if ($_precos[i].id !== '' && $_precos[i].id !== null && $_precos[i].id !== 'undefined'){
+            
+            _preco = $_precos[i].id;
+        }
+        else {
+            _preco = $_precos[i].parentNode.id;
+        }
+        
         _item = document.getElementById(_preco);
 
         _itemFlutuante = document.getElementById(_preco + '-comprar-flutuante');
@@ -56,24 +62,25 @@ window.onload = function () {
                 _acaoScroll = (window.pageYOffset || _documento.scrollTop) - (_documento.clientTop || 0),
                 _btnCart = document.getElementsByClassName('btn-cart')[0],
                 _area = $_acaoAdiciona,
-                _areaDelimitada = _btnCart.getBoundingClientRect(),
                 _movimentoScroll = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
 
-        _areaSuperior = _areaDelimitada.top + _movimentoScroll;
+        if (typeof _btnCart !== 'undefined') {
 
-        if (_acaoScroll >= _areaSuperior - 50) {
+            _areaSuperior = _btnCart.getBoundingClientRect().top + _movimentoScroll;
 
-            _area.style.display = 'block';
-        } else {
-            _area.style.display = 'none';
+            if (_acaoScroll <= _areaSuperior - 50) {
+
+                _area.className = _area.className.replace(/\b_bloco-exibir\b/gi, '');
+            } else {
+                if (_area.className.search(/\b_comprar-flutuante-fechado\b/gi) !== -1) {
+
+                    _area.className = '_bloco-exibir _comprar-flutuante-fechado';
+
+                } else {
+                    _area.className = '_bloco-exibir';
+                }
+            }
         }
-    };
-
-    ComprarFlutuante();
-
-    window.onscroll = function () {
-
-        ComprarFlutuante();
     };
 
     if (typeof ($_acaoArea) !== undefined && $_acaoArea !== null) {
@@ -91,4 +98,11 @@ window.onload = function () {
             }
         };
     }
+
+    ComprarFlutuante();
+
+    window.onscroll = function () {
+
+        ComprarFlutuante();
+    };
 };

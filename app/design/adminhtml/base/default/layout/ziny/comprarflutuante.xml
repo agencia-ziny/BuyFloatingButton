@@ -18,17 +18,11 @@
  */
 -->
 <layout version="1.0.8">
-    <catalog_product_view>
+    <adminhtml_system_config_edit>
         <reference name="head">
             <action method="addJs" ifconfig="comprarflutuante/geral/ativo">
-                <script>ziny/comprarflutuante/geral.js</script>
-            </action>
-            <action method="addCss" ifconfig="comprarflutuante/geral/ativo">
-                <stylesheet>ziny/comprarflutuante/css/geral.css.php</stylesheet>
+                <script>jscolor/jscolor.js</script>
             </action>
         </reference>
-        <reference name="product.info.form">         
-            <block type="comprarflutuante/comprarflutuante" name="comprarflutuante" template="ziny/comprarflutuante/addtocart.phtml" output="toHtml"/>      
-        </reference>
-    </catalog_product_view>
+    </adminhtml_system_config_edit>
 </layout>

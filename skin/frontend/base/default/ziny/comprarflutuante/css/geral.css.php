@@ -26,7 +26,7 @@ umask(0);
 Mage::app();
 
 // Get defines
-$config = Mage::getStoreConfig('comprarflutuante/general');
+$config = Mage::getStoreConfig('comprarflutuante/geral');
 
 header("Content-type: text/css; charset: UTF-8");
 ?>
@@ -39,9 +39,13 @@ header("Content-type: text/css; charset: UTF-8");
     position: fixed;
     <?php echo $config['caixa_lado'];?>: <?php echo $config['distancia_lateral'];?>;
     top: <?php echo $config['distancia_topo'];?>;
-    background: <?php echo $config['cor_fundo'];?>;
-    border: 1px solid #e5e5e5;
-    box-shadow: 4px 3px 0 0 rgba(0, 0, 0, .1);
+    background: #<?php echo $config['cor_fundo'];?>;
+    border: 1px solid #<?php echo $config['cor_borda'];?>;
+    <?php if ($config['caixa_lado'] == 'right'):?>
+    box-shadow: 2px 2px 1px 0 #<?php echo $config['cor_sombra'];?>;
+    <?php else: ?>
+    box-shadow: -2px 2px 1px 0 #<?php echo $config['cor_sombra'];?>;
+    <?php endif; ?>
     opacity:0;
     filter: alpha(opacity=0);
     padding: 20px;    
@@ -68,12 +72,12 @@ header("Content-type: text/css; charset: UTF-8");
     transition: 150ms all linear 0s;
 }
 #_comprar-flutuante #_area-comprar-flutuante:before {
-    background-color: <?php echo $config['cor_esconder'];?>;
-    border-top: 1px solid #eee;
-    border-bottom: 2px solid #ddd;    
+    background-color: #<?php echo $config['cor_esconder'];?>;
+    border-top: 1px solid #<?php echo $config['cor_borda'];?>;
+    border-bottom: 2px solid #<?php echo $config['cor_borda'];?>;
     <?php if ($config['caixa_lado'] == 'right'):?>
     left: -25px;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #<?php echo $config['cor_borda'];?>;
     -webkit-border-radius:3px 0 0 3px;
     -moz-border-radius:3px 0 0 3px;
     -o-border-radius:3px 0 0 3px;
@@ -81,14 +85,14 @@ header("Content-type: text/css; charset: UTF-8");
     content: '˃';
     <?php else: ?>
     right: -25px;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #<?php echo $config['cor_borda'];?>;
     -webkit-border-radius:0 3px 3px 0;
     -moz-border-radius:0 3px 3px 0;
     -o-border-radius:0 3px 3px 0;
     border-radius:0 3px 3px 0;
     content: '<';
     <?php endif; ?>
-    color: #2a2a2a;
+    color:#<?php echo $config['fonte_esconder'];?>;;
     cursor: pointer;
     display: block;
     font: 700 15px/24px Arial, sans-serif;
@@ -105,9 +109,9 @@ header("Content-type: text/css; charset: UTF-8");
 }
 #_comprar-flutuante #_area-comprar-flutuante:hover:before, #_comprar-flutuante._comprar-flutuante-fechado #_area-comprar-flutuante:before {
     display: block;
-    background-color: <?php echo $config['cor_escondido'];?>;
-    border-bottom:2px solid rgba(0, 0, 0, 0.1);
-    color: #fff;
+    background-color: #<?php echo $config['cor_escondido'];?>;
+    border-bottom:1px solid #<?php echo $config['cor_borda'];?>;
+    color: #<?php echo $config['fonte_escondido'];?>;
     -webkit-transition: 150ms all linear 0s;
     -moz-transition: 150ms all linear 0s;
     -o-transition: 150ms all linear 0s;

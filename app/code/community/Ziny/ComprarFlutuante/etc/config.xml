@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_ComprarFlutuante>
-            <version>1.0.7</version>
+            <version>1.0.8</version>
         </Ziny_ComprarFlutuante>
     </modules>
     <frontend>
@@ -60,6 +60,13 @@
                 </Ziny_ComprarFlutuante>
             </modules>
         </translate>
+        <layout>
+            <updates>
+                <comprarflutuante>
+                    <file>ziny/comprarflutuante.xml</file>
+                </comprarflutuante>
+            </updates>
+        </layout>
         <acl>
             <resources>
                 <admin>
@@ -104,16 +111,20 @@
     </global>
     <default>
         <comprarflutuante>
-            <general>
+            <geral>
                 <ativo>0</ativo>
-                <cor_fundo>#ffffff</cor_fundo>
-                <cor_esconder>#ffffff</cor_esconder>
-                <cor_escondido>#3399cc</cor_escondido>
+                <cor_fundo>#FFFFFF</cor_fundo>
+                <cor_sombra>#EEEEEE</cor_sombra>
+                <cor_borda>#DDDDDD</cor_borda>
+                <cor_esconder>#FFFFFF</cor_esconder>
+                <cor_escondido>#3399CC</cor_escondido>
+                <fonte_esconder>#444444</fonte_esconder>
+                <fonte_escondido>#FFFFFF</fonte_escondido>
                 <distancia_topo>20%</distancia_topo>
                 <distancia_lateral>.5%</distancia_lateral>
                 <caixa_lado>right</caixa_lado>
                 <caixa_tamanho>260px</caixa_tamanho>
-            </general>
+            </geral>
         </comprarflutuante>
     </default>
     <admin>

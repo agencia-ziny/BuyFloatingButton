@@ -113,13 +113,13 @@
         <comprarflutuante>
             <geral>
                 <ativo>0</ativo>
-                <cor_fundo>#FFFFFF</cor_fundo>
-                <cor_sombra>#EEEEEE</cor_sombra>
-                <cor_borda>#DDDDDD</cor_borda>
-                <cor_esconder>#FFFFFF</cor_esconder>
-                <cor_escondido>#3399CC</cor_escondido>
-                <fonte_esconder>#444444</fonte_esconder>
-                <fonte_escondido>#FFFFFF</fonte_escondido>
+                <cor_fundo>FFFFFF</cor_fundo>
+                <cor_sombra>EEEEEE</cor_sombra>
+                <cor_borda>DDDDDD</cor_borda>
+                <cor_esconder>FFFFFF</cor_esconder>
+                <cor_escondido>3399CC</cor_escondido>
+                <fonte_esconder>444444</fonte_esconder>
+                <fonte_escondido>FFFFFF</fonte_escondido>
                 <distancia_topo>20%</distancia_topo>
                 <distancia_lateral>.5%</distancia_lateral>
                 <caixa_lado>right</caixa_lado>

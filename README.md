@@ -11,12 +11,12 @@ When your customer clicks "buy" it will normally be redirected to the cart, rega
 
 ####Settings Options
 
-* Easy to Enable and Disable
-* Change Background Colors
+* Easy to Enable/Disable
+* Change Box Colors
 * Change Button Colors
+* Change Arrow Color
 * Change Box Positions (Left or Right)
 * Define Margin (Top or Side)
-
 
 ####Install Buy Floating Button
 

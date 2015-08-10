@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ziny_ComprarFlutuante>
-            <version>1.1.0</version>
+            <version>1.1.1</version>
         </Ziny_ComprarFlutuante>
     </modules>
     <frontend>

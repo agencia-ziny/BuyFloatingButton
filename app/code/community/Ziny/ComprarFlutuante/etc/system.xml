@@ -20,17 +20,17 @@
 <config>
     <tabs>
         <ziny translate="label">
-            <label>Buy Floating Button</label>
+            <label>Ziny Extensions</label>
             <sort_order>202</sort_order>
         </ziny>
     </tabs>
     <sections>
         <comprarflutuante translate="label" module="comprarflutuante">
-            <label>Settings</label>
+            <label>Buy Floating Button</label>
             <class>comprarflutuante</class>
             <tab>ziny</tab>
             <frontend_type>text</frontend_type>
-            <sort_order>9999</sort_order>
+            <sort_order>1</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
